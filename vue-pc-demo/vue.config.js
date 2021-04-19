@@ -1,12 +1,12 @@
 // vue.config.js
 // webpack 压缩插件
-const CompressionWebpackPlugin = require('compression-webpack-plugin')
-const path = require('path')
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  assetsDir: "static",
-  publicPath: "/",
-  outputDir: "dist",
+  assetsDir: 'static',
+  publicPath: '/',
+  outputDir: 'dist',
   configureWebpack: config => {
     // 生产环境配置
     if (process.env.NODE_ENV === 'production') {
@@ -16,13 +16,14 @@ module.exports = {
           // 正在匹配需要压缩的文件后缀
           test: /.(js|css|svg|woff|ttf|json|html)$/,
           // 大于10kb的会压缩
-          threshold: 10240
-        })
-      )
+          threshold: 10240,
+        }),
+      );
     } else {
       // 开发环境配置
     }
   },
+
   css: {
     extract: false,
     sourceMap: false,
@@ -34,14 +35,14 @@ module.exports = {
       },
       postcss: {
         //这里的选项会传递给 postcss-loader
-      }
-    }
+      },
+    },
   },
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'less',
-      patterns: [path.resolve(__dirname, "src/assets/css/mixin.less")] // 引入全局样式变量
-    }
+      patterns: [path.resolve(__dirname, 'src/assets/css/base.less')], // 引入全局样式变量
+    },
   },
   productionSourceMap: false,
   // 开发环境Node配置
@@ -54,11 +55,11 @@ module.exports = {
     proxy: {
       '^/api': {
         headers: {
-          'aaa': '111'
+          aaa: '111',
         },
         // 目标 API 地址
-        target: 'http://0.0.0.0:8000' 
-      }
-    }
-  }
-}
+        target: 'http://0.0.0.0:8000',
+      },
+    },
+  },
+};
