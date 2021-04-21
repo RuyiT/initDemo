@@ -58,7 +58,7 @@ module.exports = {
           aaa: '111',
         },
         // 目标 API 地址
-        target: 'http://0.0.0.0:8000',
+        target: 'http://localhost:8081',
       },
     },
   },

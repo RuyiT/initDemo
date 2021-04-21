@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import loadingVue from './loading2.vue'
+import loadingVue from './loading.vue'
 
 const LoadingConstructor = Vue.extend(loadingVue)
 const defaultOption = {
@@ -7,7 +7,7 @@ const defaultOption = {
   text: '', // 加载loading页面的显示文字
   textColor: '#fff', // 文字颜色
   line: 20, // 图标的杠数量控制
-  lineColor: '#fff' // 图标的杠的颜色控制
+  lineColor: '#fff', // 图标的杠的颜色控制
 }
 let preLoading = null // 上一个loading实例
 let count = 0 // 记录showLoading调用次数
@@ -26,7 +26,7 @@ const Loading = (options = {}) => {
   if (preLoading == null) {
     instance = new LoadingConstructor({
       el: document.createElement('div'),
-      data: options
+      data: options,
     })
     preLoading = instance
     document.body.appendChild(instance.$el)
@@ -59,7 +59,4 @@ const closeLoading = () => {
   }
 }
 
-export {
-  showLoading,
-  closeLoading
-}
+export { showLoading, closeLoading }

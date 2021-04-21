@@ -1,4 +1,3 @@
-
 <!-- 自己写的loading -->
 <style scoped>
 .loading_wrap * {
@@ -81,9 +80,20 @@
       <div class="loading_conten">
         <div class="box">
           <div class="loading_icon">
-            <svg viewBox="25 25 50 50" class="circular"><circle cx="50" cy="50" r="20" fill="none" class="path" :style="setColor"></circle></svg>
+            <svg viewBox="25 25 50 50" class="circular">
+              <circle
+                cx="50"
+                cy="50"
+                r="20"
+                fill="none"
+                class="path"
+                :style="setColor"
+              ></circle>
+            </svg>
           </div>
-          <p class="loading_text" :style="setTextColor" v-if="text!=null">{{text}}</p>
+          <p class="loading_text" :style="setTextColor" v-if="text != null">
+            {{ text }}
+          </p>
         </div>
       </div>
     </div>
@@ -92,13 +102,13 @@
 <script>
 export default {
   name: 'loading',
-  data () {
+  data() {
     return {
       show: false,
       line: 10,
       lineColor: '#666',
       text: null,
-      textColor: '#333'
+      textColor: '#333',
     }
   },
   computed: {
@@ -107,12 +117,12 @@ export default {
     },
     setTextColor: function () {
       return { color: this.textColor }
-    }
+    },
   },
   methods: {
-    handleAfterLeave () {
+    handleAfterLeave() {
       this.$emit('after-leave')
-    }
-  }
+    },
+  },
 }
 </script>

@@ -1,4 +1,7 @@
-import ajax from '@/utils/fetch'
-import api from '@/config/api.conf'
+import ajax from '../utils/fetch'
+import api from '@/api/home.conf'
 
-export const getUserInfo = () => ajax.get(api.home.getUserInfo, { showLoading: true })
+export const getUserInfo = userId =>
+  ajax.get(api.home.getUserInfo, { userId, showLoading: true })
+
+export const addList = params => ajax.post(api.home.addList, params)

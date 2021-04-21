@@ -14,9 +14,9 @@
 export default {
   name: 'bbb',
   data() {
-    return {};
+    return {}
   },
-};
+}
 </script>
 
 <style lang="less" scoped>

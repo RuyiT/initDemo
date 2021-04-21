@@ -1,10 +1,13 @@
-import Vue from 'vue';
-import App from './App.vue';
-import router from './router';
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+require('./mock/index')
 
-Vue.config.productionTip = false;
+// if (process.env.NODE_ENV !== 'production') require('./mock')
+
+Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
   router,
-}).$mount('#app');
+}).$mount('#app')

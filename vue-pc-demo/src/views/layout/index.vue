@@ -15,9 +15,9 @@ export default {
       keepAliveList: ['home'],
       // 最大缓存页面组件数量
       keepAliveMax: 1,
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="less" scoped>

@@ -62,7 +62,9 @@ npm install --save-dev prettier
 - TODO
 
 ### mock使用
-- TODO
+- npm install mockjs -D
+- mian.js -> require('./mock/index')
+- mock -> index.js   ---封装mock
 
 ### vue 多页面
 - TODO

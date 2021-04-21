@@ -6,9 +6,9 @@
 export default {
   name: 'ccc',
   data() {
-    return {};
+    return {}
   },
-};
+}
 </script>
 
 <style lang="less" scoped></style>

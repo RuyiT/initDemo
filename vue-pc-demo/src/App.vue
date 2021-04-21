@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import Layout from '@/views/layout';
+import Layout from '@/views/layout'
 
 export default {
   name: 'App',
   components: { Layout },
-};
+}
 </script>
 
 <style lang="less">

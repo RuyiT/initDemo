@@ -40,5 +40,5 @@ const routerMap = [
     path: '*', // 未知路由
     redirect: '/home/aaa',
   },
-];
-export default routerMap;
+]
+export default routerMap
