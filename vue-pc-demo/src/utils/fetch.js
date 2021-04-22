@@ -36,6 +36,7 @@ ajax.interceptors.request.use(
       handleException: defaultHandleException,
       ...config,
     }
+    console.log({ config })
     if (config.showLoading) {
       showLoading()
     }

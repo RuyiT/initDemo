@@ -22,7 +22,7 @@ export default {
     },
     handleClick2() {
       console.log('home')
-      adminService.addList(32).then(res => {
+      adminService.addList({ a: 12 }).then(res => {
         console.log({ res })
       })
     },
