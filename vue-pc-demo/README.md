@@ -1,5 +1,5 @@
 # vue-pc-demo
-
+English | [简体中文](./README.zh-CN.md) | [日本語](./README.ja.md) | [Spanish](./README.es.md)
 ## 初始化项目准备工作
 ### pc端初始化代码
 - 配置：less + (ESLint + Prettier ) + (Lint on save) + (In dedicated config files)
