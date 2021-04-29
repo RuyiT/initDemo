@@ -1,5 +1,8 @@
 # vue-pc-demo
 English | [简体中文](./README.zh-CN.md) | [日本語](./README.ja.md) | [Spanish](./README.es.md)
+## init-pc 分支初始化项目
+## temp 分支 准备做一些组件的封装
+## blog 分支 准备做一个博客联调的页面
 ## 初始化项目准备工作
 ### pc端初始化代码
 - 配置：less + (ESLint + Prettier ) + (Lint on save) + (In dedicated config files)
