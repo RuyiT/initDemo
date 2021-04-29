@@ -1,8 +1,9 @@
 const routerMap = [
   {
     path: '/',
-    component: () => import('@/views/layout'),
-    redirect: 'home',
+    name: 'root',
+    // component: () => import('@/views/layout'),
+    redirect: '/home',
     meta: {
       authConfig: {
         mustLogin: false, // 不需要管理员权限
@@ -12,7 +13,7 @@ const routerMap = [
       {
         path: 'home',
         name: 'home',
-        redirect: '/home/aaa',
+        redirect: '/home/blog',
         component: () => import('@/views/home'),
         children: [
           {
@@ -22,10 +23,10 @@ const routerMap = [
               /* webpackChunkName: "bbb" */ import('@/views/bbb.vue'),
           },
           {
-            path: 'aaa',
-            name: 'aaa',
+            path: 'blog',
+            name: 'blog',
             component: () =>
-              /* webpackChunkName: "aaa" */ import('@/views/aaa.vue'),
+              /* webpackChunkName: "blog" */ import('@/views/blog.vue'),
           },
         ],
       },
@@ -38,7 +39,7 @@ const routerMap = [
   },
   {
     path: '*', // 未知路由
-    redirect: '/home/aaa',
+    redirect: '/home/blog',
   },
 ]
 export default routerMap
