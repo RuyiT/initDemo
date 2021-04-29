@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- <div class="nav">管理中心</div> -->
     <el-button class="add">新建博客</el-button>
   </div>
 </template>

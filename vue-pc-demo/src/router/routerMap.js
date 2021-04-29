@@ -1,7 +1,7 @@
 const routerMap = [
   {
     path: '/',
-    name: 'root',
+    name: 'home',
     // component: () => import('@/views/layout'),
     redirect: '/home',
     meta: {
