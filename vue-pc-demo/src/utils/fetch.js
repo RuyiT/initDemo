@@ -31,12 +31,12 @@ const ajax = axios.create({
 // POST传参序列化(添加请求拦截器)
 ajax.interceptors.request.use(
   config => {
+    console.log({ config })
     config = {
       showLoading: defaultShowLoading,
       handleException: defaultHandleException,
       ...config,
     }
-    console.log({ config })
     if (config.showLoading) {
       showLoading()
     }

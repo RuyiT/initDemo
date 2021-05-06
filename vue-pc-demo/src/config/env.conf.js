@@ -3,7 +3,7 @@ const buildEnv = process.env.VUE_APP_BUILD_ENV
 // 通用配置
 const baseConfig = {
   // 前端base路径
-  webBaseURL: '/pc',
+  webBaseURL: '/', // 如果是“/pc” 路径就是localhost:8080/pc+路由
   // 后端base路径
   apiBaseURL: '/api',
 }

@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-    <Layout />
+    <!-- <Layout /> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Layout from '@/views/layout'
+// import Layout from '@/views/layout'
 
 export default {
   name: 'App',
-  components: { Layout },
+  // components: { Layout },
 }
 </script>
 

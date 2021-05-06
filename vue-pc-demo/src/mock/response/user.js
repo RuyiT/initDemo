@@ -1,7 +1,7 @@
 import Mock from 'mockjs'
 
 const Random = Mock.Random // 根据占位符用于随机生成字段 (占位符)
-
+// 文档 http://mockjs.com/examples.html#Random\.id\(\)
 export const getUserInfo = options => {
   console.log({ options })
   // return {
@@ -140,5 +140,38 @@ export const addList = options => {
     success: true,
     msg: 'ok',
     data: arr,
+  })
+}
+
+export const getTableData = () => {
+  let i = 5
+  let arr = []
+  while (i--) {
+    let template = {
+      title: Random.cword('鱼宝宝发达国家阿凡达', 2, 5), // 从第一个参数里面最少取两个，最多取5个
+      id: Random.id(),
+      'content|2-4': '第三方广东省法规的风格',
+    }
+    arr.push(template)
+  }
+  return Mock.mock({
+    code: '0',
+    success: true,
+    msg: 'ok',
+    data: arr,
+  })
+}
+
+export const getBlogData = () => {
+  let template = {
+    title: Random.cword('鱼宝宝发达国家阿凡达', 2, 5), // 从第一个参数里面最少取两个，最多取5个
+    'content|2-4': '第三方广东省法规的风格',
+  }
+  console.log('------', template)
+  return Mock.mock({
+    code: '0',
+    success: true,
+    msg: 'ok',
+    data: template,
   })
 }

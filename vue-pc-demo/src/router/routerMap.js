@@ -2,7 +2,7 @@ const routerMap = [
   {
     path: '/',
     name: 'home',
-    // component: () => import('@/views/layout'),
+    component: () => import('@/views/layout'),
     redirect: '/home',
     meta: {
       authConfig: {
@@ -21,6 +21,12 @@ const routerMap = [
             name: 'bbb',
             component: () =>
               /* webpackChunkName: "bbb" */ import('@/views/bbb.vue'),
+          },
+          {
+            path: 'blogDetail',
+            name: 'blogDetail',
+            component: () =>
+              /* webpackChunkName: "bbb" */ import('@/views/blogDetail.vue'),
           },
           {
             path: 'blog',
