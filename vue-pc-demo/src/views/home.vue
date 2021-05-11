@@ -2,6 +2,19 @@
   <div>
     <div @click="handleClick">请求数据</div>
     <div @click="handleClick2">请求数据2</div>
+    <iframe
+      src="https://www.baidu.com"
+      style="
+        top: 500px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border: none;
+      "
+    >
+    </iframe>
     <router-view></router-view>
   </div>
 </template>
