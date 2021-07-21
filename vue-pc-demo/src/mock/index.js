@@ -9,6 +9,7 @@ import {
 const Random = Mock.Random
 
 Mock.mock(/\/getUserInfo/, 'get', getUserInfo) // 正则的方式传参，效果同下
+// Mock.mock(/^\/getUserInfo*/, 'get', getUserInfo) // 正则的方式传参，效果同下
 Mock.mock(/\/getTableData/, 'get', getTableData) // 正则的方式传参，效果同下
 Mock.mock(/\/getBlogData/, 'get', getBlogData) // 正则的方式传参，效果同下
 

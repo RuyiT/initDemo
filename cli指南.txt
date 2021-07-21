@@ -1,0 +1,51 @@
+1. vue-cli如何安装指定版本？
+    npm install -g @vue/cli@版本号   例：npm install -g @vue/cli@4.2.0
+    npm uninstall -g @vue/cli 卸载
+    
+2. 通过命令行查询可用cli的包的版本号： npm view vue-cli versions --json
+
+3. vue --version 或 vue -V   // 查询版本 
+
+4. 零配置启动/打包一个.vue文件： npm install -g @vue/cli-service-global 
+   用于开发一个库、组件，做一些小demo等都是非常适合的！
+
+5. vue create 项目名    创建项目
+
+6. 一开始只有两个选项: default(默认配置)和Manually select features(手动配置)
+
+7. 选择配置  
+	? Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection) 
+  	// 检查项目所需的功能:(按<space>选择，<a>切换所有，<i>反转选择）
+  	>( ) TypeScript                                 // 支持使用 TypeScript 书写源码
+   	( ) Progressive Web App (PWA) Support          // PWA 支持
+   	( ) Router                                     // 支持 vue-router
+  	 ( ) Vuex                                       // 支持 vuex
+   	( ) CSS Pre-processors                         // 支持 CSS 预处理器。
+   	( ) Linter / Formatter                         // 支持代码风格检查和格式化。
+   	( ) Unit Testing                               // 支持单元测试。
+   	( ) E2E Testing  
+	根据你的项目需要来选择配置,空格键是选中与取消，A键是全选
+	回车下一步
+
+8. 选择css预处理器
+
+9. 是否使用路由的history模式
+
+10. 选择Eslint代码验证规则
+	> ESLint with error prevention only
+  	ESLint + Airbnb config
+  	ESLint + Standard config
+  	ESLint + Prettier
+
+11. 选择什么时候进行代码规则检测
+	>( ) Lint on save // 保存就检测
+   	( ) Lint and fix on commit // fix和commit时候检查
+
+12. 把babel,postcss,eslint这些配置文件放哪
+	? Where do you prefer placing config for Babel, PostCSS, ESLint, etc.? (Use arrow keys)
+  	> In dedicated config files // 独立文件放置
+    	In package.json // 放package.json里
+
+13. Save this as a preset for future projects? (Y/n) // 是否记录一下以便下次继续使用这套配置
+	// 选保存之后，会让你写一个配置的名字：
+	Save preset as:  name // 然后你下次进入配置可以直接使用你这次的配置了
