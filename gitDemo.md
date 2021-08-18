@@ -104,3 +104,4 @@ git remote set-url origin https://<your_token>@github.com/<USERNAME>/<REPO>.git
  3.<REPO>：是你的仓库名称
 然后git push https://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@github.com/RuyiT/vue3.git
 ##See https://blog.csdn.net/weixin_41010198/article/details/119698015
+'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'
