@@ -17,6 +17,8 @@
  
 13. git branch -r  查看远程分支
 
+14. git  rm -rf --cached "文件名"  如果是第三方的git文件，解除绑定，然后重新 add commit 
+
 ### git 版本相关操作
 1.  git log     ---查看历史版本
     git log --pretty=oneline    ---也是查看历史版本（只显示版本号）
@@ -32,7 +34,8 @@
 1.  git --version 查看版本
 2.  git config --global user.name "自定义用户名"  ---配置全局用户名和邮箱，
     git config --global user.email "邮箱"   ---取消全局用户名和邮箱在--global后加--unset
-
+    git config --global credential.helper store (输入这个命令后,以后只要在输入一次用户名密码)
+    
 3.  git config --global --list  ---查看当前全局变量
 4.  >>> ssh-keygen -t rsa -C "yourmail@glanway.com" 生成第一个ssh key（邮箱）
     >>> 输入文件名
@@ -53,6 +56,7 @@
            eval ssh-agent -s
     >>> 4. ssh-add ~/.ssh/id_rsa_github
            ssh-add ~/.ssh/id_rsa_gitlab   ---"Identity added: "为执行成功
+    >>> 5. ssh -T git@github.com  测试
 7.  创建并修改config文件
     创建config文件，将文件创建在【.ssh】目录下
     在windows下新建一个txt文本，然后将名字改成config（包括.txt后缀）
@@ -88,3 +92,15 @@
 
 ### cmd 相关操作
 1. C: ---盘加':'冒号，跳到指定盘
+
+git push https://github.com/RuyiT/vue3.git main Username for 'https://github.com': ruyi Password for 'https://2227429@github.com': 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
+
+
+## git 个人令牌
+git remote set-url origin https://<your_token>@github.com/<USERNAME>/<REPO>.git
+ 如：git remote set-url https://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@github.com/RuyiT/vue3.git
+ 1.<your_token>：换成你自己得到的token
+ 2.<USERNAME>：是你自己github的用户名
+ 3.<REPO>：是你的仓库名称
+然后git push https://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@github.com/RuyiT/vue3.git
+##See https://blog.csdn.net/weixin_41010198/article/details/119698015
