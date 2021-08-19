@@ -34,6 +34,7 @@
 1.  git --version 查看版本
 2.  git config --global user.name "自定义用户名"  ---配置全局用户名和邮箱，
     git config --global user.email "邮箱"   ---取消全局用户名和邮箱在--global后加--unset
+    git config --global user.password "密码"
     git config --global credential.helper store (输入这个命令后,以后只要在输入一次用户名密码)
     
 3.  git config --global --list  ---查看当前全局变量
@@ -98,10 +99,20 @@ git push https://github.com/RuyiT/vue3.git main Username for 'https://github.com
 
 ## git 个人令牌
 git remote set-url origin https://<your_token>@github.com/<USERNAME>/<REPO>.git
- 如：git remote set-url https://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@github.com/RuyiT/vue3.git
+ 如：git remote set-url https://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@github.com/RuyiT/vue3.git
+ 如：git remote set-url https://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@github.com/RuyiT/node-server.git
  1.<your_token>：换成你自己得到的token
  2.<USERNAME>：是你自己github的用户名
  3.<REPO>：是你的仓库名称
-然后git push https://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@github.com/RuyiT/vue3.git
+然后git push https://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@github.com/RuyiT/vue3.git
+然后git push https://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@github.com/RuyiT/gitDemo.git
+然后git push https://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@github.com/RuyiT/node-server.git
 ##See https://blog.csdn.net/weixin_41010198/article/details/119698015
-'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'
+'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'
+
+ git remote rm origin 删除关联的远程仓库
+ git remote -v 查询关联的远程仓库
+ git remote set-url https://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@github.com/RuyiT/node-server.git 设置
+git remote add origin https://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@github.com/RuyiT/node-server.git 增加远程仓库
+git push --set-upstream https://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@github.com/RuyiT/node-server.git main push到远程仓库
+git config --system --unset credential.helper 如果在push的时候没有出现输入用户名密码
