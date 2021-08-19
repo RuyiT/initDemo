@@ -105,7 +105,7 @@ git remote set-url origin https://<your_token>@github.com/<USERNAME>/<REPO>.git
  2.<USERNAME>：是你自己github的用户名
  3.<REPO>：是你的仓库名称
 然后git push https://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@github.com/RuyiT/vue3.git
-然后git push https://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@github.com/RuyiT/gitDemo.git
+然后git push https://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@github.com/RuyiT/initDemo.git
 然后git push https://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@github.com/RuyiT/node-server.git
 ##See https://blog.csdn.net/weixin_41010198/article/details/119698015
 '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'
